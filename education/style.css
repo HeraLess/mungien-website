@@ -1,0 +1,567 @@
+body {
+    background: url(pictures/pixelcut-export.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color:rgb(255, 255, 255);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #fdfdfd;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-danger {
+    background-color: #dc2626;
+}
+
+.btn-danger:hover {
+    background-color: #b91c1c;
+}
+
+.btn-success {
+    background-color: #059669;
+}
+
+.btn-success:hover {
+    background-color: #047857;
+}
+
+.grade-selection, .semester-selection {
+    text-align: center;
+    margin: 2rem 0;
+    color: white;
+}
+
+.grade-selection button, .semester-selection button {
+    margin: 0 0.5rem;
+
+}
+
+.admin-login {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.error {
+    color: #dc2626;
+    margin-top: 0.5rem;
+}
+
+.lesson-form {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.lessons-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.subject-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.subject-title {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.lesson-card {
+    background-color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lesson-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.lesson-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+.badge-teacher {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge-student {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.youtube-link {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.youtube-link:hover {
+    text-decoration: underline;
+}
+/* تأثير التحليق عند مرور الفأرة */
+
+.btn:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-out;
+}
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* تأثير التحليق للبطاقات */
+.lesson-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+/* تأثير التلاشي */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* تأثير التلاشي عند الانتقال */
+.page {
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* التأثير عند الظهور */
+}
+
+/* تأثير الانزلاق */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* تطبيق تأثير الانزلاق على الصفحة */
+.page.slide {
+    animation: slideIn 1s forwards;
+}
+
+/* تأثير اختفاء الصفحة */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.page.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+
+
+/* خلفية الصفحة الرئيسية فقط */
+body {
+   
+    font-family: Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    min-height: 100vh;
+    padding: 2rem;
+    /* التأثير عند دخول الصفحة الأولى فقط */
+    animation: pageIn 1s ease-out; /* الأنيميشن عند دخول الصفحة الأولى */
+}
+
+/* تأثير الظهور من العدم (الصفحة الرئيسية فقط) */
+@keyframes pageIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8); /* يبدأ بالحجم الأصغر */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* ينتهي بالحجم الطبيعي */
+    }
+}
+
+
+/* تأثير الظهور التدريجي للنصوص */
+h1 {
+    text-align: center;
+    color: #fdfdfd;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    animation: fadeIn 2s ease-out; /* تأثير الظهور التدريجي */
+}
+
+/* أزرار */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    animation: zoomIn 1s ease-out; /* تأثير التكبير */
+    
+}
+
+
+
+/* التأثيرات عند التحليق فوق الأزرار */
+.btn:hover {
+    transform: translateY(-5px); /* تحرك الزر إلى الأعلى */
+    background-color: #1d4ed8;
+}
+body {
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    min-height: 100vh;
+    padding: 2rem;
+    /* التأثير عند دخول الصفحة الأولى فقط */
+    animation: pageIn 1s ease-out; /* الأنيميشن عند دخول الصفحة الأولى */
+}
+
+/* تأثير الظهور من العدم (الصفحة الرئيسية فقط) */
+@keyframes pageIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8); /* يبدأ بالحجم الأصغر */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* ينتهي بالحجم الطبيعي */
+    }
+}
+
+/* تأثير الظهور التدريجي للنصوص */
+h1 {
+    text-align: center;
+    color: #fdfdfd;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    animation: fadeIn 2s ease-out; /* تأثير الظهور التدريجي */
+}
+
+/* أزرار */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    animation: zoomIn 1s ease-out; /* تأثير التكبير */
+}
+
+.btn:hover {
+    transform: translateY(-5px); /* تحرك الزر إلى الأعلى */
+    background-color: #1d4ed8;
+}
+
+/* إضافة الأزرار الخاصة بالحذف */
+.btn-danger {
+    background-color: #dc2626;
+    color: white;
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn-danger:hover {
+    background-color: #b91c1c;
+    transform: translateY(-5px); /* تحرك الزر عند التحليق */
+}
+
+/* تأثيرات التحليق عند مرور الفأرة */
+.lesson-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+/* إضافة تأثيرات أخرى حسب المطلوب */
+.lesson-card {
+    background-color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lesson-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.lesson-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+.badge-teacher {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge-student {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.youtube-link {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.youtube-link:hover {
+    text-decoration: underline;
+}
+
+/* التأثيرات عند تحليق الأزرار */
+.btn:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-out;
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* تأثير التلاشي */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* تأثير التلاشي عند الانتقال */
+.page {
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* التأثير عند الظهور */
+}
+
+/* تأثير الانزلاق */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* تطبيق تأثير الانزلاق على الصفحة */
+.page.slide {
+    animation: slideIn 1s forwards;
+}
+
+/* تأثير اختفاء الصفحة */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.page.fade-out {
+    animation: fadeOut 1s forwards;
+}
+.top-left-image {
+    position: absolute; /* تثبيت الصورة في مكان معين */
+    top: 44px; /* المسافة من الأعلى */
+    left: 30px; /* المسافة من اليسار */
+    width: 160px; /* عرض الصورة */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    z-index: 20; /* ضمان ظهور الصورة فوق المحتوى */
+}
+/* إضافة التنسيق للمربع المنبثق */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    z-index: 10000;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: darkblue;
+}
+.search-bar button {
+    margin-top: -15px; /* رفع الزر */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+/* تحسين شكل زر الحذف */
+.btn-danger {
+    padding: 12px 24px; /* حشو الزر */
+    font-size: 16px; /* حجم الخط */
+    background-color: #FF4136; /* اللون الأحمر */
+    color: white; /* لون النص */
+    border: none; /* إزالة الحدود */
+    border-radius: 8px; /* جعل الزر ذو حواف منحنية */
+    cursor: pointer; /* تغيير المؤشر إلى شكل اليد عند المرور على الزر */
+    transition: all 0.3s ease; /* تأثير التفاعل مع الزر */
+}
+
+.btn-danger:hover {
+    background-color: #e02b2b; /* تغيير اللون إلى أحمر أغمق عند المرور بالفأرة */
+    transform: scale(1.05); /* زيادة حجم الزر قليلاً */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة تأثير الظل */
+}
+
+.btn-danger:focus {
+    outline: none; /* إزالة التأثير الافتراضي عند التركيز */
+    box-shadow: 0 0 0 2px rgba(255, 66, 66, 0.5); /* إضافة تأثير عند التركيز */
+}
+
+
+
+
