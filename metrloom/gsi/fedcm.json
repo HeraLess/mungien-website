@@ -1,0 +1,44 @@
+{
+"idtoken_endpoint": "https://accounts.google.com/gsi/fedcm/issue",
+"id_token_endpoint": "https://accounts.google.com/gsi/fedcm/issue",
+"id_assertion_endpoint": "https://accounts.google.com/gsi/fedcm/issue",
+"metrics_endpoint": "https://accounts.google.com/gsi/fedcm/metrics",
+"accounts_endpoint": "https://accounts.google.com/gsi/fedcm/listaccounts",
+"client_metadata_endpoint": "https://accounts.google.com/gsi/fedcm/clientmetadata",
+"client_id_metadata_endpoint": "https://accounts.google.com/gsi/fedcm/clientmetadata",
+"signin_url": "https://accounts.google.com/gsi/fedcm/signin",
+"login_url": "https://accounts.google.com/gsi/fedcm/signin",
+"revocation_endpoint": "https://accounts.google.com/gsi/fedcm/revoke",
+"disconnect_endpoint": "https://accounts.google.com/gsi/fedcm/revoke",
+"supports_add_account": true,
+"supports_use_other_account": true,
+"accounts": {
+  "include": "n"
+},
+"account_label": "n",
+"modes": {
+  "button": {
+    "supports_use_other_account": true
+  },
+  "widget": {
+    "supports_use_other_account": false
+  },
+  "active": {
+    "supports_use_other_account": true
+  },
+  "passive": {
+    "supports_use_other_account": false
+  }
+},
+"branding": {
+   "background_color": "#1a73e8",
+   "color": "#fff",
+   "icons": [{
+     "url": "https://accounts.google.com/gsi-static/google-logo.png",
+     "size": 32
+   }, {
+     "url": "https://accounts.google.com/gsi-static/google-logo_40.png",
+     "size": 40
+   }]
+  }
+}
